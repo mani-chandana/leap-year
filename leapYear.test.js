@@ -12,4 +12,13 @@ describe('Leap Year Kata', () => {
         expect(isLeapYear(1600)).toBe(true);
     });
 
+    test('years divisible by 100 but not 400 are not leap years', () => {
+        expect(isLeapYear(1900)).toBe(false);
+        expect(isLeapYear(2100)).toBe(false);
+    });
+
+    test('years not divisible by 4 are not leap years', () => {
+        expect(isLeapYear(2019)).toBe(false);
+        expect(isLeapYear(2023)).toBe(false);
+    });
 });
